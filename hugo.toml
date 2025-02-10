@@ -1,3 +1,23 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://liamtyler.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Sherlock Games Helper"
+theme = 'PaperMod'
+
+[params.assets]
+  disableFingerprinting = true
+
+[params.profileMode]
+  enabled = true
+  title = "Sherlock Games Helper"
+  subtitle = "A small website to help with directory & map related lookups in Sherlock style games"
+[[params.profileMode.buttons]]
+  name = "Games"
+  url = "/games/"
+
+[[menu.main]]
+  identifier = "Games"
+  name = "Games"
+  url = "/games/"
+ 
+[outputs]
+  home = [ "HTML", "RSS", "JSON" ]
