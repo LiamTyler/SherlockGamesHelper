@@ -5,11 +5,11 @@ draft = false
 +++
 
 {{< rawhtml >}}
-    <link href="/boi-arkham/sherlock.css" rel="stylesheet" />
+    <link href="/SherlockGamesHelper/boi-arkham/sherlock.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <!--
-    <script src="/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script src="/jquery.csv.min.js"></script>
+    <script src="/SherlockGamesHelper/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="/SherlockGamesHelper/jquery.csv.min.js"></script>
     -->
 {{< /rawhtml >}}
 
@@ -32,7 +32,7 @@ draft = false
     <ul id="searchResults"></ul>
     <br>
     <div id="mapContainer">
-        <img id="mapImage" src="/boi-arkham/arkham_map.jpg"/>
+        <img id="mapImage" src="/SherlockGamesHelper/boi-arkham/arkham_map.jpg"/>
         <canvas id="mapCanvas"></canvas>
     </div>
 {{< /rawhtml >}}
@@ -40,6 +40,6 @@ draft = false
 
 
 {{< rawhtml >}}
-    <script src="/boi-arkham/searchables.js"></script>
-    <script src="/boi-arkham/sherlock.js"></script>
+    <script src="/SherlockGamesHelper/boi-arkham/searchables.js"></script>
+    <script src="/SherlockGamesHelper/boi-arkham/sherlock.js"></script>
 {{< /rawhtml >}}

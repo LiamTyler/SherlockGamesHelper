@@ -12,12 +12,12 @@ theme = 'PaperMod'
   subtitle = "A small website to help with directory & map related lookups in Sherlock style games"
 [[params.profileMode.buttons]]
   name = "Games"
-  url = "/games/"
+  url = "/SherlockGamesHelper/games/"
 
 [[menu.main]]
   identifier = "Games"
   name = "Games"
-  url = "/games/"
+  url = "/SherlockGamesHelper/games/"
  
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]

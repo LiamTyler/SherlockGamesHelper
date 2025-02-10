@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Games on Sherlock Games Helper</title>
-    <link>http://localhost:1313/games/</link>
+    <link>http://localhost:1313/SherlockGamesHelper/games/</link>
     <description>Recent content in Games on Sherlock Games Helper</description>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 10 Feb 2025 16:38:48 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/games/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/SherlockGamesHelper/games/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bureau of Investigation: Arkham</title>
-      <link>http://localhost:1313/games/boi-arkham/map/</link>
+      <link>http://localhost:1313/SherlockGamesHelper/games/boi-arkham/map/</link>
       <pubDate>Mon, 10 Feb 2025 16:38:48 -0600</pubDate>
-      <guid>http://localhost:1313/games/boi-arkham/map/</guid>
-      <description>&lt;link href=&#34;http://localhost:1313/boi-arkham/sherlock.css&#34; rel=&#34;stylesheet&#34; /&gt;
+      <guid>http://localhost:1313/SherlockGamesHelper/games/boi-arkham/map/</guid>
+      <description>&lt;link href=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/sherlock.css&#34; rel=&#34;stylesheet&#34; /&gt;
     &lt;script src=&#34;https://cdn.jsdelivr.net/npm/fuse.js@7.0.0&#34;&gt;&lt;/script&gt;
     &lt;!--
-    &lt;script src=&#34;http://localhost:1313/jquery-3.7.1.min.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
-    &lt;script src=&#34;http://localhost:1313/jquery.csv.min.js&#34;&gt;&lt;/script&gt;
+    &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/jquery-3.7.1.min.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+    &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/jquery.csv.min.js&#34;&gt;&lt;/script&gt;
     --&gt;
 
 
@@ -41,15 +41,15 @@
     &lt;ul id=&#34;searchResults&#34;&gt;&lt;/ul&gt;
     &lt;br&gt;
     &lt;div id=&#34;mapContainer&#34;&gt;
-        &lt;img id=&#34;mapImage&#34; src=&#34;http://localhost:1313/boi-arkham/arkham_map.jpg&#34;/&gt;
+        &lt;img id=&#34;mapImage&#34; src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/arkham_map.jpg&#34;/&gt;
         &lt;canvas id=&#34;mapCanvas&#34;&gt;&lt;/canvas&gt;
     &lt;/div&gt;
 
 
 
 
-    &lt;script src=&#34;http://localhost:1313/boi-arkham/searchables.js&#34;&gt;&lt;/script&gt;
-    &lt;script src=&#34;http://localhost:1313/boi-arkham/sherlock.js&#34;&gt;&lt;/script&gt;</description>
+    &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/searchables.js&#34;&gt;&lt;/script&gt;
+    &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/sherlock.js&#34;&gt;&lt;/script&gt;</description>
     </item>
   </channel>
 </rss>
