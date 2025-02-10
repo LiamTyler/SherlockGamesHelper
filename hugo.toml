@@ -1,4 +1,4 @@
-baseURL = 'https://liamtyler.github.io/'
+baseURL = 'https://liamtyler.github.io/SherlockGamesHelper/'
 languageCode = 'en-us'
 title = "Sherlock Games Helper"
 theme = 'PaperMod'
