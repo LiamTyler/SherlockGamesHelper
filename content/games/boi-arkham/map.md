@@ -31,7 +31,7 @@ draft = false
     <br>
     <ul id="searchResults"></ul>
     <br>
-    <div id="mapContainer">
+    <div id="mapContainer" onresize="OnResize();">
         <img id="mapImage" src="/SherlockGamesHelper/boi-arkham/arkham_map.jpg"/>
         <canvas id="mapCanvas"></canvas>
     </div>

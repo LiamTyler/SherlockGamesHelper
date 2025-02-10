@@ -40,7 +40,7 @@
     &lt;br&gt;
     &lt;ul id=&#34;searchResults&#34;&gt;&lt;/ul&gt;
     &lt;br&gt;
-    &lt;div id=&#34;mapContainer&#34;&gt;
+    &lt;div id=&#34;mapContainer&#34; onresize=&#34;OnResize();&#34;&gt;
         &lt;img id=&#34;mapImage&#34; src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/arkham_map.jpg&#34;/&gt;
         &lt;canvas id=&#34;mapCanvas&#34;&gt;&lt;/canvas&gt;
     &lt;/div&gt;

@@ -74,7 +74,6 @@ function UpdateSearchBar()
         return;
     }
     
-    console.log( results );
     searchResults.innerHTML = "";
     for ( let i = 0; i < results.length; ++i )
     {
@@ -94,7 +93,6 @@ function UpdateSearchThreshold()
       threshold: searchThreshold.value,
       keys: ['searchName']
     }
-    console.log( options );
 
     FUSE_INDEX = new Fuse( SEARCHABLES, options );
     
@@ -132,4 +130,10 @@ function Animate( now )
     requestAnimationFrame( Animate );
 }
 
+window.addEventListener( 'resize', function( event )
+{
+    canvas.width = mapImage.width;
+    canvas.height = mapImage.height;
+
+}, true);
 Animate();
