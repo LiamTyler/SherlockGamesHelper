@@ -5,7 +5,7 @@ draft = false
 +++
 
 {{< rawhtml >}}
-    <link href="/sherlock/sherlock.css" rel="stylesheet" />
+    <link href="/boi-arkham/sherlock.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <!--
     <script src="/jquery-3.7.1.min.js" type="text/javascript"></script>
@@ -32,7 +32,7 @@ draft = false
     <ul id="searchResults"></ul>
     <br>
     <div id="mapContainer">
-        <img id="mapImage" src="/sherlock/map2.jpg"/>
+        <img id="mapImage" src="/boi-arkham/arkham_map.jpg"/>
         <canvas id="mapCanvas"></canvas>
     </div>
 {{< /rawhtml >}}
@@ -40,6 +40,6 @@ draft = false
 
 
 {{< rawhtml >}}
-    <script src="/sherlock/searchables.js"></script>
-    <script src="/sherlock/sherlock.js"></script>
+    <script src="/boi-arkham/searchables.js"></script>
+    <script src="/boi-arkham/sherlock.js"></script>
 {{< /rawhtml >}}
