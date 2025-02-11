@@ -7,8 +7,8 @@ draft = false
 {{< rawhtml >}}
     <link href="/SherlockGamesHelper/boi-arkham/sherlock.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
-    <!--
     <script src="/SherlockGamesHelper/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <!--
     <script src="/SherlockGamesHelper/jquery.csv.min.js"></script>
     -->
 {{< /rawhtml >}}
@@ -40,6 +40,7 @@ draft = false
 
 
 {{< rawhtml >}}
+    <script src="/SherlockGamesHelper/boi-arkham/arkham_markers.js"></script>
     <script src="/SherlockGamesHelper/boi-arkham/searchables.js"></script>
     <script src="/SherlockGamesHelper/boi-arkham/sherlock.js"></script>
 {{< /rawhtml >}}
