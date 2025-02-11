@@ -231,7 +231,7 @@ Mitchell,Francis,,5,NW
 Montgomery,Betty,,13,SE
 Moore,Frank,,12,NW
 Morgan,Francis,,12,SW
-Morgan,Marvin,,15,NW,
+Morgan,Marvin,,15,NW
 Morris,Daniel,,15,NW
 Morrison,Antonio,,1,SE
 Moss,Lonnie,,29,SW
@@ -296,4 +296,260 @@ Rogers,Melvin,,14,NW
 Rose,Tom,,26,WC
 Ross,Wayne,,1,NE
 Russell,Leon,,4,NE
-Ryan,Johnny,6,WC
+Ryan,Johnny,,6,WC
+Sanders,Lester,,17,NE
+Schmidt,Horace,,28,WC
+Schneider,Eleanor,,9,SE
+Schultz,Barbara,,13,SE
+Schwartz,Francis,,10,SW
+Scott,Willie,,13,NW
+Sharp,Ivan,,14,SW
+Shaw,Wilson,,3,SW
+Shellem,Georges A.,,1,NW
+Shelton,Albert,,9,SE
+Shrewsbury,Laban,,19,WC
+Silimbani,Matteo,,5,SW
+Simmons,Jesse,,12,NE
+Simon,Wilfred,,24,SW
+Simpson,Homer,,6,NE
+Sims,Evelyn,,7,SE
+Sincaul,Cyprian,,3,NE
+Smith,Japhet,,5,NW
+Smith,Morgan,,9,SE
+Smith,Robert,,1,NW
+Snyder,Jerome,,5,NE
+Spencer,Guy,,17,WC
+Stanley,George,,9,SE
+Steele,Lawrence,,10,SW
+Stephens,Keith,,9,WC
+Stevens,Oscar,,11,NE
+Stewart,Gerald,,14,NW
+Stone,Bruce,,20,WC
+Sullivan,Gordon,,3,NE
+Sutton,Ralph,,14,SE
+Swanson,Alton,,18,SW
+Taylor,Sam,,26,SW
+Terry,Alfred,,15,SW
+Thomas,Thomas,,11,NW
+Thomson,Wallace,,2,SW
+Thornton,Otis,,25,SW
+Thurston,Francis Wayland,,17,NE
+Tran,Lyle,,16,WC
+Tucker,Virgil,,1,NE
+Turner,Alfred,,10,NW
+Tuttle,Amos,,20,WC
+Typer,Alonzo Hasbrouch,,10,ELS
+Undercliffe,Errol,,97,ELS
+Upham,Phillips,,3,SW
+Upton,Daniel,,23,ELS
+Vaughn,Fred,,8,SW
+Von Junzt,Friedrich Wilhelm,,17,ELS
+Wade,Edward,,12,SE
+Wagner,Jimmie,,11,WC
+Waite,Asenath,,29,SW
+Waite,Ephraim,,56,ELS
+Waldron,Howard,,2,SW
+Walker,David,,7,NW
+Wallace,Wallace,,3,NE
+Walmsley,Gordon,,73,ELS
+Walsh,Lois,,3,SE
+Walters,Irene,,14,SE
+Ward,Charles Dexter,,28,ELS
+Ward,Elmer,,3,NE
+Warner,Phillip,,23,SW
+Warren,Alexander,,24,WC
+Warren,Harley,,7,NE
+Warren,Rice,,23,SW
+Washington,Marion,,17,NE
+Watkins,Ervin,,15,EC
+Watson,Ray,,7,NE
+Watts,Clarence,,5,SW
+Weaver,Dean,,6,WC
+Webb,Curtis,,16,NE
+Webb,William Channing,,87,ELS
+Weber,Frances,,5,SE
+Welch,John,,9,SW
+Wells,Roland,,13,NE
+Wendy-Smith,Sir Amery,,76,ELS
+West,Herbert,,10,WC
+West,Sam,,5,NE
+Whateley,Lavinia,,3,ELS
+Whateley,Noah,,3,ELS
+Whateley,Wilbur,,3,ELS
+Wheeler,Jimmy,,16,EC
+White,Walter,,1,NW
+Williams,James,,3,NW
+Williamson,Helen,,12,SE
+Willis,Merle,,11,EC
+Wilmarth,Albert N.,,28,SW
+Wilson,Richard,,8,NW
+Wolfe,Anthony,,16,SW
+Wong,Thelma,,1,SE
+Wood,Jorge,,15,SE
+Wood,Lloyd,,6,NE
+Woods,Everett,,14,NE
+Wright,Howard,,11,NW
+Yates,Clark,,4,SE
+Young,Eugene,,9,NW
+Zakharovich,Aleksandra,,76,ELS
+Zarnak,Anton,,66,ELS
+Zimmerman,Angelo,,28,SW
+Hanson,Kelvin,Attorneys:,4,EC
+Holt,Alexis,Attorneys:,10,NW
+Little,Robin,Attorneys:,4,ELS
+Maxwell,Holly,Attorneys:,7,SW
+McGee,Ross,Attorneys:,22,EC
+Phelps,Kerry,Attorneys:,19,NW
+Ramsey,Kelvin,Attorneys:,2,SE
+Townsend,Wilson,Attorneys:,26,WC
+East Boston Savings Bank,,Banks:,12,SE
+Federal Reserve Bank of Boston,,Banks:,22,EC
+First National Bank,,Banks:,25,EC
+Hyde Park Savings Bank,,Banks:,733,ELS
+Miskatonic Saving Bank,,Banks:,26,WC
+Salem Five Cents Saving Bank,,Banks:,111,ELS
+Barker,,Bookstores:,2,SE
+Edwards,,Bookstores:,10,SW
+Lawson,,Bookstores:,6,SE
+Moss,,Bookstores:,17,SW
+Nash,,Bookstores:,10,NW
+Old Books,,Bookstores:,13,SW
+Reed,,Bookstores:,9,ELS
+Swanson's Books,,Bookstores:,8,WC
+Walsh,,Bookstores:,62,ELS
+Aylesbury Bridge,,Bridges:,1,NW
+Garrison Bridge,,Bridges:,6,NW
+Peabody Bridge,,Bridges:,8,NE
+West Bridge,,Bridges:,2,NW
+Baptist Church,,Churches:,19,EC
+Cathedral Church of St. Paul,,Churches:,4,EC
+Cathedral of the Holy Cross Church,,Churches:,20,SW
+Christ Church,,Churches:,14,WC
+East Church,,Churches:,8,EC
+First Church of Christ,,Churches:,14,SE
+King's Chapel,,Churches:,1,EC
+Old North Church,,Churches:,15,EC
+Old South Church,,Churches:,3,WC
+Park Street Church,,Churches:,1,EC
+Trinity Church,,Churches:,3,WC
+West Church,,Churches:,7,WC
+Berklee College of Music,,Education:,2,WC
+Boston Arts Academy,,Education:,98,ELS
+Boston State College,,Education:,12,WC
+Boston University,,Education:,1,EC
+Emerson College,,Education:,12,EC
+Harvard University,,Education:,210,ELS
+Massachusetts Institute of Technology,,Education:,16,NW
+Miskatonic University,,Education:,21,WC
+New England Music Academy,,Education:,13,WC
+Northeastern University,,Education:,10,WC
+Public School of Southeast Arkham,,Education:,3,SE
+University of Massachusetts,,Education:,112,ELS
+Gresham Corporation,,Funeral Home,18,WC
+Arkham Medical Examiner,,Government Offices:,8,WC
+Arkham Police Department Central Precinct,,Government Offices:,27,WC
+Arkham Police Department SE Islet Precinct,,Government Offices:,2,SE
+Boston City Hall,,Government Offices:,1,EC
+Boston Medical Examiner,,Government Offices:,7,SW
+Boston Police Department Central Precinct,,Government Offices:,7,EC
+Boston Police Department NE Precinct,,Government Offices:,3,NE
+Boston Police Department NW Precinct,,Government Offices:,4,NW
+Boston Police Department SE Precinct,,Government Offices:,6,SE
+Boston Police Department SW Precinct,,Government Offices:,3,SW
+Boston Police Department WC Precinct,,Government Offices:,10,WC
+Charleston State Prison,,Government Offices:,12,NW
+Consulate of Belgium,,Government Offices:,24,EC
+Consulate of Canada,,Government Offices:,23,EC
+Consulate of France,,Government Offices:,24,EC
+Consulate of Switzerland,,Government Offices:,24,EC
+Massachusetts Statehouse,,Government Offices:,19,EC
+Arkham Burying Ground,,Graveyards:,17,EC
+Arkham Christchurch Cemetery,,Graveyards:,15,SE
+Arkham Wooded Graveyard,,Graveyards:,2,WC
+Granary,,Graveyards:,1,EC
+King's Chapel,,Graveyards:,1,EC
+Doctor Agar,,Health Care:,20,SW
+Doctor Ainstree,,Health Care:,8,SE
+Arkham Sanatorium,,Health Care:,621,ELS
+Doctor Bestianelli,,Health Care:,3,EC
+Boston City Hospital,,Health Care:,123,ELS
+Boston State Hospital,,Health Care:,45,ELS
+Doctor Brown,,Health Care:,18,SW
+Doctor Fell,,Health Care:,5,NW
+Doctor Gibilsco,,Health Care:,8,WC
+Doctor Harrigan,,Health Care:,12,WC
+Doctor Horowitz,,Health Care:,17,NE
+Doctor Jackson,,Health Care:,2,SE
+Doctor Killeen,,Health Care:,13,NW
+Doctor Llewellyn,,Health Care:,20,WC
+Doctor Mason,,Health Care:,18,SE
+Doctor Phillips,,Health Care:,8,WC
+Doctor Richards,,Health Care:,21,NW
+St. Elizabeth's Medical Center,,Health Care:,54,ELS
+St. Mary's Hospital,,Health Care:,32,WC
+American House,,Hotels:,6,WC
+Boston Park Plaza,,Hotels:,21,WC
+Copley Square Hotel,,Hotels:,5,WC
+Crawford House,,Hotels:,7,SW
+Fermont Copley Plaza,,Hotels:,5,WC
+Hotel Touraine,,Hotels:,24,WC
+Lenox House,,Hotels:,11,ELS
+Mariner's House,,Hotels:,7,NE
+Omni Parker House,,Hotels:,1,EC
+Quincy House,,Hotels:,18,ELS
+Ritz-Carlton Hotel,,Hotels:,4,WC
+Boone,,Jewlery Stores:,6,NE
+Carter,,Jewlery Stores:,25,WC
+Harmon,,Jewlery Stores:,4,EC
+Harris,,Jewlery Stores:,63,ELS
+Kelley,,Jewlery Stores:,7,SW
+Pratt,,Jewlery Stores:,21,WC
+Boston Athenaeum,,Leisure and Culture:,19,EC
+Boston Common,,Leisure and Culture:,18,EC
+Boston Public Garden,,Leisure and Culture:,11,EC
+Boston Public Library,,Leisure and Culture:,19,WC
+Fenway Park,,Leisure and Culture:,16,ELS
+Fine Art Museum,,Leisure and Culture:,11,WC
+Franklin Park Zoo,,Leisure and Culture:,1,ELS
+Frazier Art Gallery,,Leisure and Culture:,10,SE
+Massachusetts Historical Society,,Leisure and Culture:,24,WC
+State Library,,Leisure and Culture:,24,WC
+Symphony Hall,,Leisure and Culture:,24,WC
+TD Garden,,Leisure and Culture:,24,WC
+The Boston Conservatory of Music,,Leisure and Culture:,24,WC
+Faneuil Hall,,Markets:,2,EC
+Boston Globe,,Newspapers:,23,EC
+Boston Herald,,Newspapers:,14,SE
+Abbast Photography and Development Studio,,Photography:,6,SW
+Boston Airport - Jeffery Field,,Public Transportation:,55,ELS
+Boston Dockers Syndicate,,Public Transportation:,9,SE
+Boston Harbor Authorities,,Public Transportation:,5,NE
+Charlestown Navy Yard,,Public Transportation:,3,NE
+Dockers Trade Union,,Public Transportation:,7,NW
+Anchor,,Pubs and Restaurants:,3,NW
+Angel,,Pubs and Restaurants:,192,ELS
+Appenrodt,,Pubs and Restaurants:,3,SE
+Bar of Gold,,Pubs and Restaurants:,11,WC
+Cafe Royal,,Pubs and Restaurants:,10,NW
+Driver's Oyster Bar,,Pubs and Restaurants:,15,ELS
+Globe,,Pubs and Restaurants:,23,EC
+Haxell,,Pubs and Restaurants:,25,NW
+Holborn,,Pubs and Restaurants:,24,ELS
+Keen,,Pubs and Restaurants:,7,NE
+Niven,,Pubs and Restaurants:,23,NW
+Office,,Pubs and Restaurants:,8,EC
+One Eyed Jacks,,Pubs and Restaurants:,8,NE
+Rule,,Pubs and Restaurants:,26,WC
+Ship & Turtle,,Pubs and Restaurants:,11,NW
+Simpson,,Pubs and Restaurants:,7,NW
+Sons of Liberty,,Pubs and Restaurants:,3,EC
+Tarr,,Pubs and Restaurants:,10,SW
+Tea Party,,Pubs and Restaurants:,22,EC
+The Darthmouth,,Pubs and Restaurants:,14,SE
+The Ghoul,,Pubs and Restaurants:,31,SW
+The Green Goblin,,Pubs and Restaurants:,30,WC
+The Old Lagger,,Pubs and Restaurants:,8,SE
+The Palermo,,Pubs and Restaurants:,9,SE
+White Eagle,,Pubs and Restaurants:,7,SW
+White Hart,,Pubs and Restaurants:,8,WC
+Emerson Trucks,,Truck Rental:,10,SE

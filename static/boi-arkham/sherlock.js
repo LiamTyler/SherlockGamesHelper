@@ -27,7 +27,6 @@ function GetMarker( streetNumber, region )
         let m = ARKHAM_MARKERS[i];
         if ( m.streetNumber == streetNumber && m.region == region )
         {
-            console.log( m );
             return m;
         }
     }

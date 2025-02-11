@@ -82,7 +82,7 @@ def ProcessDirectory( fname ):
         searchable += " " + csvData[i][5] + csvData[i][6]
         if title:
             searchable = title + " " + searchable
-        csvData[i][0] = searchable
+        csvData[i][0] = searchable.strip()
     
     return CSVToJSON( csvData )
 
