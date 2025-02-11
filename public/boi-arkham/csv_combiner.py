@@ -6,6 +6,7 @@ ARKHAM_MAP_HEIGHT = 2997
 
 TYPE_MARKED_LOCATION = "0"
 TYPE_PERSON = "1"
+TYPE_STREET = "2"
 
 def ReadCSV( filename ):
     rows = []
@@ -40,8 +41,11 @@ def CSVToJSON( data ):
                 continue
 
             x = row[i]
-            if x.isdigit():
+            try:
                 x = int( x )
+            except:
+                pass
+            
             if columnNames[i] == "mapX":
                 x = x / ARKHAM_MAP_WIDTH
             elif columnNames[i] == "mapY":
@@ -59,7 +63,7 @@ def WriteJSONToJSFile( jsonData, filename, firstLine ):
     f.write( writeableData )
     f.close()
 
-def ProcessMapLocations( fname, cityName ):
+def ProcessMarkers( fname, cityName ):
     csvData = ReadCSV( fname )
     csvData = InsertColToCSVData( "city", cityName, csvData )
     csvData = InsertColToCSVData( "searchName", "", csvData )
@@ -68,6 +72,11 @@ def ProcessMapLocations( fname, cityName ):
         region = csvData[i][3]
         csvData[i][0] = str( streetNumber ) + region
     
+    return CSVToJSON( csvData )
+
+def ProcessStreets( fname, cityName ):
+    csvData = ReadCSV( fname )
+    csvData = InsertColToCSVData( "type", TYPE_STREET, csvData )
     return CSVToJSON( csvData )
 
 def ProcessDirectory( fname ):
@@ -86,8 +95,11 @@ def ProcessDirectory( fname ):
     
     return CSVToJSON( csvData )
 
-jsonData = ProcessMapLocations( "arkhamMarkers.csv", "Arkham" )
+jsonData = ProcessMarkers( "arkham_markers.csv", "Arkham" )
 WriteJSONToJSFile( jsonData, "arkham_markers.js", "const ARKHAM_MARKERS = " )
+
+jsonData = ProcessStreets( "arkham_streets.csv", "Arkham" )
+WriteJSONToJSFile( jsonData, "arkham_streets.js", "const ARKHAM_STREETS = " )
 
 jsonData = ProcessDirectory( "directory.csv" )
 WriteJSONToJSFile( jsonData, "searchables.js", "const SEARCHABLES = " )

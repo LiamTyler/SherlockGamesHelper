@@ -2,18 +2,23 @@ const BLINK_SPEED = 0.002;
 const ARKHAM_IW = 2989;
 const ARKHAM_IH = 2997;
 const IRADIUS = 16;
+const ARKHAM_PIXELS_PER_MILE = 218;
 
-const TYPE_MARKED_LOCATION = 0
-const TYPE_PERSON = 1
+const TYPE_MARKED_LOCATION = 0;
+const TYPE_PERSON = 1;
+const TYPE_STREET = 2;
 
 const mapImage = document.getElementById( "mapImage" );
 const canvas = document.getElementById( "mapCanvas" );
 const ctx = canvas.getContext( "2d" );
 
-FUSE_INDEX = null;
+arkhamSelected = true; // two maps: arkham and boston
+SEARCH_INDEX = null;
 currentAlpha = 0;
 currentRatio = 1.0;
-highlightedMarkers = []
+highlightedMarkers = [];
+highlightedStreets = [];
+ALL_SEARCHABLES = [];
 
 function GetDisplayableResult( res )
 {
@@ -38,14 +43,15 @@ function UpdateSearchBar()
     const searchResults = document.getElementById("searchResults");
     
     highlightedMarkers = [];
-    val = searchBar.value;
+    highlightedStreets = [];
+    let val = searchBar.value;
     if ( val == "" )
     {
         searchResults.innerHTML = "";
         return;
     }
     
-    const results = FUSE_INDEX.search( val );
+    const results = SEARCH_INDEX.search( val );
     if ( results.length == 0 )
     {
         searchResults.innerHTML = "<li>NO ENTRIES FOUND</li>";
@@ -57,46 +63,85 @@ function UpdateSearchBar()
     {
         let res = results[i].item;
         searchResults.innerHTML += "<li>" + GetDisplayableResult( res ) + "</li>";
-        let marker = GetMarker( res.streetNumber, res.region );
-        if ( marker )
-            highlightedMarkers.push( marker );
+        if ( res.type == TYPE_STREET )
+        {
+            highlightedStreets.push( res );
+        }
+        else
+        {
+            let marker = GetMarker( res.streetNumber, res.region );
+            if ( marker )
+                highlightedMarkers.push( marker );
+        }
     }
 }
 
 function UpdateSearchThreshold()
 {
-    const searchThreshold = document.getElementById("searchThreshold");
+    const searchThreshold = document.getElementById( "searchThreshold" );
     
-    const options =
+    let options =
     {
         includeScore: true,
         ignoreLocation: true,
         threshold: searchThreshold.value,
         keys: ['searchName']
+    };
+    ALL_SEARCHABLES = SEARCHABLES;
+    if ( arkhamSelected )
+    {
+        ALL_SEARCHABLES = ALL_SEARCHABLES.concat( ARKHAM_STREETS );
     }
-
-    FUSE_INDEX = new Fuse( SEARCHABLES, options );
+    
+    SEARCH_INDEX = new Fuse( ALL_SEARCHABLES, options );
     
     UpdateSearchBar();
 }
 
-function HighlightMarkers( loc )
+function HighlightMarkers()
 {
     if ( highlightedMarkers.length == 0 )
         return;
     
     ctx.fillStyle = `rgb(255, 0, 0, ${currentAlpha})`;
     ctx.strokeStyle = "rgba(1, 1, 1, 0)";
-    radius = currentRatio * IRADIUS;
+    let radius = currentRatio * IRADIUS;
     for ( let i = 0; i < highlightedMarkers.length; ++i )
     {
         let loc = highlightedMarkers[i];
-        x = loc.mapX * canvas.width;
-        y = loc.mapY * canvas.height;
+        let x = loc.mapX * canvas.width;
+        let y = loc.mapY * canvas.height;
         ctx.beginPath();
-        ctx.arc( x, y, radius, 0, 2 * Math.PI);
+        ctx.arc( x, y, radius, 0, 2 * Math.PI );
         ctx.fill();
         ctx.stroke();
+    }
+}
+
+function HighlightStreets( now )
+{
+    if ( highlightedStreets.length == 0 )
+        return;
+    
+    let canvasFontSize = 0.5 + 0.5 * (1 + Math.sin( BLINK_SPEED * now ));
+    canvasFontSize *= currentRatio;
+    ctx.fillStyle = `rgb(0, 0, 0, ${currentAlpha})`;
+    ctx.strokeStyle = "rgba(1, 1, 1, 0)";
+    ctx.textAlign = "center";
+    for ( let i = 0; i < highlightedStreets.length; ++i )
+    {
+        let street = highlightedStreets[i];
+        let x = street.mapX * canvas.width;
+        let y = street.mapY * canvas.height;
+        let fontSize = street.size * canvasFontSize;
+        let theta = street.rotation * Math.PI / 180.0;
+        
+        ctx.save();
+        ctx.font = `${fontSize}px monospace`;
+        ctx.translate( x, y );
+        ctx.rotate( theta );
+        ctx.fillText( street.searchName, 0, 0 );
+        ctx.restore();
     }
 }
 
@@ -104,10 +149,72 @@ function Animate( now )
 {
     ctx.clearRect( 0, 0, canvas.width, canvas.height );
     currentAlpha = 0.5 * (1 + Math.sin( BLINK_SPEED * now ));
-    currentRatio = canvas.width / ARKHAM_IW;
+    currentRatio = canvas.width;
+    if ( arkhamSelected )
+        currentRatio /= ARKHAM_IW;
+    else
+        currentRatio /= ARKHAM_IW; // TODO
     HighlightMarkers();
+    HighlightStreets( now );
     
     requestAnimationFrame( Animate );
+}
+
+function GetFirstAlphaChar( s )
+{
+    for ( let i = 0; i < s.length; ++i )
+    {
+        if ( !('0' <= s[i] && s[i] <= '9') )
+            return i;
+    }
+}
+
+function UpdateDistanceResult( s )
+{
+    const distResult = document.getElementById( "distResult" );
+    distResult.innerText = s;
+}
+
+function UpdateDistanceCalc()
+{
+    UpdateDistanceResult( "" );
+    const fromBox = document.getElementById( "distFrom" );
+    const toBox = document.getElementById( "distTo" );
+    if ( !fromBox.value.length || !toBox.value.length )
+        return;
+    
+    let fromIdx = GetFirstAlphaChar( fromBox.value );    
+    let fromStreetNum = Number( fromBox.value.substr( 0, fromIdx ) );
+    let fromRegion = fromBox.value.substr( fromIdx );
+    
+    let toIdx = GetFirstAlphaChar( toBox.value );    
+    let toStreetNum = Number( toBox.value.substr( 0, toIdx ) );
+    let toRegion = toBox.value.substr( toIdx );
+    
+    let fromMarker = GetMarker( fromStreetNum, fromRegion );
+    let toMarker = GetMarker( toStreetNum, toRegion );
+    
+    if ( !fromMarker )
+    {
+        UpdateDistanceResult( "'From' location not found" );
+    }
+    else if ( !toMarker )
+    {
+        UpdateDistanceResult( "'To' location not found" );
+    }
+    else
+    {
+        let scale = ARKHAM_PIXELS_PER_MILE / ARKHAM_IW;
+        let dx = Math.abs( toMarker.mapX - fromMarker.mapX );
+        let dy = Math.abs( toMarker.mapY - fromMarker.mapY );
+        let dist = (dx/scale + dy/scale).toFixed( 2 );
+        UpdateDistanceResult( String( dist ) + " miles" );
+    }
+}
+
+function OnMapSelectChange( obj )
+{
+    arkhamSelected = (obj.value == "Arkham");
 }
 
 window.addEventListener( 'resize', function( event )

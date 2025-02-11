@@ -31,16 +31,34 @@ draft = false
     <br>
     <ul id="searchResults"></ul>
     <br>
+    <select name="mapSelect" id="mapSelect" onchange="OnMapSelectChange(this);">
+        <option value="Arkham">Arkham</option>
+        <option value="Boston">Boston</option>
+    </select>
     <div id="mapContainer" onresize="OnResize();">
         <img id="mapImage" src="/SherlockGamesHelper/boi-arkham/arkham_map.jpg"/>
         <canvas id="mapCanvas"></canvas>
     </div>
+    
+    <label for="distFrom">Approx Distance From:</label>
+    <input type="text" id="distFrom" name="distFrom"
+        autocomplete="off"
+        style="border: 1px solid black"
+        onChange="UpdateDistanceCalc();">
+    <label for="distFrom" class="padLeft">To:</label>
+        <input type="text" id="distTo" name="distTo"
+        autocomplete="off"
+        style="border: 1px solid black"
+        onChange="UpdateDistanceCalc();">
+    <br>
+    <p id="distResult"></p>
 {{< /rawhtml >}}
 
 
 
 {{< rawhtml >}}
     <script src="/SherlockGamesHelper/boi-arkham/arkham_markers.js"></script>
+    <script src="/SherlockGamesHelper/boi-arkham/arkham_streets.js"></script>
     <script src="/SherlockGamesHelper/boi-arkham/searchables.js"></script>
     <script src="/SherlockGamesHelper/boi-arkham/sherlock.js"></script>
 {{< /rawhtml >}}
