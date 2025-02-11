@@ -40,7 +40,7 @@
     &lt;br&gt;
     &lt;ul id=&#34;searchResults&#34;&gt;&lt;/ul&gt;
     &lt;br&gt;
-    &lt;select name=&#34;mapSelect&#34; id=&#34;mapSelect&#34;&gt;
+    &lt;select name=&#34;mapSelect&#34; id=&#34;mapSelect&#34; onchange=&#34;OnMapSelectChange(this);&#34;&gt;
         &lt;option value=&#34;Arkham&#34;&gt;Arkham&lt;/option&gt;
         &lt;option value=&#34;Boston&#34;&gt;Boston&lt;/option&gt;
     &lt;/select&gt;
@@ -48,6 +48,19 @@
         &lt;img id=&#34;mapImage&#34; src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/arkham_map.jpg&#34;/&gt;
         &lt;canvas id=&#34;mapCanvas&#34;&gt;&lt;/canvas&gt;
     &lt;/div&gt;
+    
+    &lt;label for=&#34;distFrom&#34;&gt;Approx Distance From:&lt;/label&gt;
+    &lt;input type=&#34;text&#34; id=&#34;distFrom&#34; name=&#34;distFrom&#34;
+        autocomplete=&#34;off&#34;
+        style=&#34;border: 1px solid black&#34;
+        onChange=&#34;UpdateDistanceCalc();&#34;&gt;
+    &lt;label for=&#34;distFrom&#34; class=&#34;padLeft&#34;&gt;To:&lt;/label&gt;
+        &lt;input type=&#34;text&#34; id=&#34;distTo&#34; name=&#34;distTo&#34;
+        autocomplete=&#34;off&#34;
+        style=&#34;border: 1px solid black&#34;
+        onChange=&#34;UpdateDistanceCalc();&#34;&gt;
+    &lt;br&gt;
+    &lt;p id=&#34;distResult&#34;&gt;&lt;/p&gt;
 
 
 
