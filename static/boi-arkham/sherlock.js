@@ -1,11 +1,14 @@
 const BLINK_SPEED = 0.002;
 const ARKHAM_IW = 2989;
 const ARKHAM_IH = 2997;
+const BOSTON_IW = 3350;
+const BOSTON_IH = 3374;
 const IRADIUS = 16;
 const ARKHAM_PIXELS_PER_MILE = 218;
+const BOSTON_PIXELS_PER_MILE = 123;
 
 const TYPE_MARKED_LOCATION = 0;
-const TYPE_PERSON = 1;
+const TYPE_PERSON =1;
 const TYPE_STREET = 2;
 
 const mapImage = document.getElementById( "mapImage" );
@@ -27,12 +30,26 @@ function GetDisplayableResult( res )
 
 function GetMarker( streetNumber, region )
 {
-    for ( let i = 0; i < ARKHAM_MARKERS.length; ++i )
+    if ( arkhamSelected )
     {
-        let m = ARKHAM_MARKERS[i];
-        if ( m.streetNumber == streetNumber && m.region == region )
+        for ( let i = 0; i < ARKHAM_MARKERS.length; ++i )
         {
-            return m;
+            let m = ARKHAM_MARKERS[i];
+            if ( m.streetNumber == streetNumber && m.region == region )
+            {
+                return m;
+            }
+        }
+    }
+    else
+    {
+        for ( let i = 0; i < BOSTON_MARKERS.length; ++i )
+        {
+            let m = BOSTON_MARKERS[i];
+            if ( m.streetNumber == streetNumber && m.region == region )
+            {
+                return m;
+            }
         }
     }
 }
@@ -89,9 +106,9 @@ function UpdateSearchThreshold()
     };
     ALL_SEARCHABLES = SEARCHABLES;
     if ( arkhamSelected )
-    {
         ALL_SEARCHABLES = ALL_SEARCHABLES.concat( ARKHAM_STREETS );
-    }
+    else
+        ALL_SEARCHABLES = ALL_SEARCHABLES.concat( BOSTON_STREETS );
     
     SEARCH_INDEX = new Fuse( ALL_SEARCHABLES, options );
     
@@ -126,7 +143,7 @@ function HighlightStreets( now )
     let canvasFontSize = 0.5 + 0.5 * (1 + Math.sin( BLINK_SPEED * now ));
     canvasFontSize *= currentRatio;
     ctx.fillStyle = `rgb(0, 0, 0, ${currentAlpha})`;
-    ctx.strokeStyle = "rgba(1, 1, 1, 0)";
+    ctx.strokeStyle = "rgba(1, 1, 1, 1)";
     ctx.textAlign = "center";
     for ( let i = 0; i < highlightedStreets.length; ++i )
     {
@@ -153,7 +170,7 @@ function Animate( now )
     if ( arkhamSelected )
         currentRatio /= ARKHAM_IW;
     else
-        currentRatio /= ARKHAM_IW; // TODO
+        currentRatio /= BOSTON_IW;
     HighlightMarkers();
     HighlightStreets( now );
     
@@ -205,6 +222,8 @@ function UpdateDistanceCalc()
     else
     {
         let scale = ARKHAM_PIXELS_PER_MILE / ARKHAM_IW;
+        if ( !arkhamSelected )
+            scale = BOSTON_PIXELS_PER_MILE / BOSTON_IW;
         let dx = Math.abs( toMarker.mapX - fromMarker.mapX );
         let dy = Math.abs( toMarker.mapY - fromMarker.mapY );
         let dist = (dx/scale + dy/scale).toFixed( 2 );
@@ -215,6 +234,12 @@ function UpdateDistanceCalc()
 function OnMapSelectChange( obj )
 {
     arkhamSelected = (obj.value == "Arkham");
+    if ( arkhamSelected )
+        mapImage.src = "/SherlockGamesHelper/boi-arkham/arkham_map.jpg";
+    else
+        mapImage.src = "/SherlockGamesHelper/boi-arkham/boston_map.jpg";
+    
+    UpdateSearchThreshold();
 }
 
 window.addEventListener( 'resize', function( event )
@@ -228,6 +253,12 @@ $( document ).ready(function() {
     canvas.width = mapImage.width;
     canvas.height = mapImage.height;
     UpdateSearchThreshold();
+});
+
+mapImage.addEventListener( "load", function ()
+{
+    canvas.width = mapImage.width;
+    canvas.height = mapImage.height;
 });
 
 Animate();

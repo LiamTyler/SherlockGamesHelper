@@ -68,6 +68,8 @@
     &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/arkham_markers.js&#34;&gt;&lt;/script&gt;
     &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/arkham_streets.js&#34;&gt;&lt;/script&gt;
     &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/searchables.js&#34;&gt;&lt;/script&gt;
+    &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/boston_markers.js&#34;&gt;&lt;/script&gt;
+    &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/boston_streets.js&#34;&gt;&lt;/script&gt;
     &lt;script src=&#34;http://localhost:1313/SherlockGamesHelper/boi-arkham/sherlock.js&#34;&gt;&lt;/script&gt;</description>
     </item>
   </channel>

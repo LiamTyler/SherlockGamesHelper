@@ -10,8 +10,8 @@ Armstrong,Bennie,,31,WC
 Arnold,Edmund,,15,WC
 Arone,John,,12,WC
 Ashley,Ferdinand C.,,21,WC
-Austin,Forrest,,9,SE
 Atwood,Howard,,24,WC
+Austin,Forrest,,9,SE
 Bailey,Russell,,4,NW
 Baker,Clarence,,15,NW
 Baldwin,Wilbert,,6,SW
@@ -23,7 +23,8 @@ Barnes,Calvin,,8,NE
 Barnett,Donald,,13,SE
 Barret,James,,6,SE
 Bates,Joseph,,9,SE
-Beck,Harry,,12,SE
+Beck,Richard,,11,SE
+Becker,Harry,,12,SE
 Bell,Leo,,5,NW
 Bennett,Theodore,,9,NE
 Benson,Herbert,,12,SW
@@ -35,6 +36,8 @@ Blayne,Horvath,,14,NE
 Bowen,Enoch,,31,ELS
 Bowen,Nathaniel,,13,SW
 Bowman,Lillian,,6,SE
+Boyd,Wesley,,20,WC
+Bradley,Angelo,,26,WC
 Brewer,Gladys,,12,SE
 Brooks,Frederick,,8,NE
 Brown,Gilbert,,9,NE
@@ -101,7 +104,7 @@ Emerson,Arthur,,10,SE
 Erickson,Mike,,29,SW
 Evans,Brendan,,17,SW
 Farrel,Walter,,6,SE
-Ferry,Joachim,,31,SW
+Feery,Joachim,,31,SW
 Ferguson,Patrick,,30,WC
 Fields,Florence,,2,SE
 Fillman,Max,,15,NE
@@ -113,7 +116,7 @@ Ford,Jerry,,13,NE
 Foster,Alvin,,16,NE
 Fowler,Rose,,5,SE
 Fox,Franklin,,24,WC
-Franklin,Alin,,5,SE
+Franklin,Alan,,5,SE
 Frazier,Dorothy,,13,EC
 Freeborn,M. Tyler,,16,WC
 Freeman,Woodrow,,9,SW
@@ -135,12 +138,13 @@ Green,Yvette,,1,SE
 Greene,Larry,,9,SE
 Gregory,Arthur,,9,SE
 Gresham,Everett,,5,SE
+Griffin,Alexander,,29,WC
 Griffin,Ronald,,4,NE
 Griffith,Ira,,12,SW
 Gross,Allan,,28,SW
 Hale,Stanley,,17,SW
 Hall,Harry,,8,NW
-Halsey,Alen,,31,WC
+Halsey,Allen,,31,WC
 Hamilton,Harvey,,16,NE
 Hammond,Janice,,16,NE
 Hansen,Billie,,20,WC
@@ -275,7 +279,7 @@ Porter,Glen,,6,WC
 Powell,Vincent,,2,NE
 Powers,Harold,,2,SE
 Price,Clyde,,13,NE
-Quinn,Alan,,2,SW
+Quinn,Alan,,27,SW
 Ramsey,Kelvin,,16,SW
 Ray,Dennis,,5,EC
 Reed,Leroy,,3,NW
@@ -512,11 +516,12 @@ Fenway Park,,Leisure and Culture:,16,ELS
 Fine Art Museum,,Leisure and Culture:,11,WC
 Franklin Park Zoo,,Leisure and Culture:,1,ELS
 Frazier Art Gallery,,Leisure and Culture:,10,SE
-Massachusetts Historical Society,,Leisure and Culture:,24,WC
-State Library,,Leisure and Culture:,24,WC
-Symphony Hall,,Leisure and Culture:,24,WC
-TD Garden,,Leisure and Culture:,24,WC
-The Boston Conservatory of Music,,Leisure and Culture:,24,WC
+Isabella Stewart Gardner Museum,,Leisure and Culture,24,WC
+Massachusetts Historical Society,,Leisure and Culture:,16,WC
+State Library,,Leisure and Culture:,19,EC
+Symphony Hall,,Leisure and Culture:,23,WC
+TD Garden,,Leisure and Culture:,17,EC
+The Boston Conservatory of Music,,Leisure and Culture:,25,WC
 Faneuil Hall,,Markets:,2,EC
 Boston Globe,,Newspapers:,23,EC
 Boston Herald,,Newspapers:,14,SE

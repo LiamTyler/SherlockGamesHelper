@@ -60,5 +60,7 @@ draft = false
     <script src="/SherlockGamesHelper/boi-arkham/arkham_markers.js"></script>
     <script src="/SherlockGamesHelper/boi-arkham/arkham_streets.js"></script>
     <script src="/SherlockGamesHelper/boi-arkham/searchables.js"></script>
+    <script src="/SherlockGamesHelper/boi-arkham/boston_markers.js"></script>
+    <script src="/SherlockGamesHelper/boi-arkham/boston_streets.js"></script>
     <script src="/SherlockGamesHelper/boi-arkham/sherlock.js"></script>
 {{< /rawhtml >}}

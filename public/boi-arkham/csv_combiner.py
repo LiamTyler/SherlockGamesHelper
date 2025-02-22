@@ -4,6 +4,9 @@ import json
 ARKHAM_MAP_WIDTH = 2989
 ARKHAM_MAP_HEIGHT = 2997
 
+BOSTON_MAP_WIDTH = 3350
+BOSTON_MAP_HEIGHT = 3374
+
 TYPE_MARKED_LOCATION = "0"
 TYPE_PERSON = "1"
 TYPE_STREET = "2"
@@ -29,11 +32,17 @@ def InsertColToCSVData( colName, val, csvData ):
 
     return csvData
 
-def CSVToJSON( data ):
+def CSVToJSON( data, isArkham ):
     columnNames = data[0]
     data = data[1:]
     numCols = len( columnNames )
     jsonData = []
+    mapWidth = ARKHAM_MAP_WIDTH
+    mapHeight = ARKHAM_MAP_HEIGHT
+    if not isArkham:
+        mapWidth = BOSTON_MAP_WIDTH
+        mapHeight = BOSTON_MAP_HEIGHT
+    
     for row in data:
         rowJson = {}
         for i in range( numCols ):
@@ -47,9 +56,9 @@ def CSVToJSON( data ):
                 pass
             
             if columnNames[i] == "mapX":
-                x = x / ARKHAM_MAP_WIDTH
+                x = x / mapWidth
             elif columnNames[i] == "mapY":
-                x = x / ARKHAM_MAP_HEIGHT
+                x = x / mapHeight
             
             rowJson[columnNames[i]] = x
         jsonData.append( rowJson )
@@ -72,12 +81,12 @@ def ProcessMarkers( fname, cityName ):
         region = csvData[i][3]
         csvData[i][0] = str( streetNumber ) + region
     
-    return CSVToJSON( csvData )
+    return CSVToJSON( csvData, cityName == "Arkham" )
 
 def ProcessStreets( fname, cityName ):
     csvData = ReadCSV( fname )
     csvData = InsertColToCSVData( "type", TYPE_STREET, csvData )
-    return CSVToJSON( csvData )
+    return CSVToJSON( csvData, cityName == "Arkham" )
 
 def ProcessDirectory( fname ):
     csvData = ReadCSV( fname )
@@ -93,7 +102,7 @@ def ProcessDirectory( fname ):
             searchable = title + " " + searchable
         csvData[i][0] = searchable.strip()
     
-    return CSVToJSON( csvData )
+    return CSVToJSON( csvData, True )
 
 jsonData = ProcessMarkers( "arkham_markers.csv", "Arkham" )
 WriteJSONToJSFile( jsonData, "arkham_markers.js", "const ARKHAM_MARKERS = " )
@@ -103,3 +112,9 @@ WriteJSONToJSFile( jsonData, "arkham_streets.js", "const ARKHAM_STREETS = " )
 
 jsonData = ProcessDirectory( "directory.csv" )
 WriteJSONToJSFile( jsonData, "searchables.js", "const SEARCHABLES = " )
+
+jsonData = ProcessMarkers( "boston_markers.csv", "Boston" )
+WriteJSONToJSFile( jsonData, "boston_markers.js", "const BOSTON_MARKERS = " )
+
+jsonData = ProcessStreets( "boston_streets.csv", "Boston" )
+WriteJSONToJSFile( jsonData, "boston_streets.js", "const BOSTON_STREETS = " )
